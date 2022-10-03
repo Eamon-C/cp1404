@@ -1,3 +1,9 @@
+"""
+CP1404 prac
+password_stars.py
+"""
+
+
 def main():
     length_requirement = 6
     password = get_password(length_requirement)
