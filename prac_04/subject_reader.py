@@ -13,7 +13,7 @@ def main():
 
 def print_data(data):
     for subject_data in data:
-        print("{} is taught by {:12} and has {:3} students".format(*subject_data))
+        print(f"{subject_data[0]} is taught by {subject_data[1]:12} and has {subject_data[2]:3} students")
 
 
 def get_data():
