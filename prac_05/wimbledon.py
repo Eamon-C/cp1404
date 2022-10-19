@@ -15,6 +15,7 @@ def main():
 
 
 def display_results(champion_to_count, countries):
+    # displays the results in a formatted fashion
     print("Wimbledon Champions: ")
     for name, count in champion_to_count.items():
         print(name, count)
@@ -23,6 +24,7 @@ def display_results(champion_to_count, countries):
 
 
 def process_data(data):
+    # adds the desired data into a dictionary
     champion_to_count = {}
     countries = set()
     for line in data:
@@ -35,6 +37,7 @@ def process_data(data):
 
 
 def get_data():
+    # gets the desired information from the wimbledon.csv file
     data = []
     with open(FILENAME, "r", encoding="utf-8-sig") as in_file:
         in_file.readline()
