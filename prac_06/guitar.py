@@ -1,5 +1,5 @@
 """
-CP1404 prac, week 6
+CP1404 prac,  week 6
 guitar.py
 estimated time (including guitar_test.py and guitars.py: 30min
 actual: 90 min

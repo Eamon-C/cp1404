@@ -1,5 +1,5 @@
 """
-CP1404 prac, week 6
+CP1404 prac,  week 6
 guitar_test.py
 """
 
