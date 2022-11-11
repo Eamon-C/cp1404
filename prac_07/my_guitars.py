@@ -5,13 +5,19 @@ my_guitars.py
 
 from prac_06.guitar import Guitar
 
-CURRENT_YEAR = 2022
-VINTAGE_YEAR = 50
+FILENAME = "guitars.csv"
 
 
 def main():
     guitars = []
-    in_file = open("guitars.csv", "r")
+    guitars_to_add = []
+    get_guitar(guitars_to_add)
+    with open(FILENAME, "a") as out_file:
+        for guitar in guitars_to_add:
+            guitar_string = ",".join(guitar)
+            out_file.write("\n" + guitar_string)
+
+    in_file = open(FILENAME, "r")
     for line in in_file:
         parts = line.strip().split(",")
         guitars.append(Guitar(parts[0], parts[1], parts[2]))
@@ -22,7 +28,17 @@ def main():
         print(guitar)
 
 
-# my_guitar = Guitar("name", 2000, 100)
-# my_guitar_other = Guitar("name", 2001, 100)
-# print(my_guitar < my_guitar_other)
+def get_guitar(guitars):
+    print("My guitars!")
+    while True:
+        name = input("Name: ")
+        if name == "":
+            break
+        year = input("Year: ")
+        cost = input("Cost: ")
+        guitars.append([name, year, cost])
+        print(f"{name} {year} {cost} added.")
+    return guitars
+
+
 main()
