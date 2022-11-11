@@ -15,7 +15,7 @@ MENU = "- (L)oad projects\n- (S)ave projects\n- (D)isplay projects\n- (F)ilter p
 def main():
     """main function"""
     choice = input(MENU).upper()
-    filename = "projects.txt"   # sets default filename
+    filename = "projects.txt"  # sets default filename
     projects = []
     while choice != "Q":
         if choice == "L":
