@@ -1,6 +1,8 @@
 """
 CP1404 prac, week 8
 convert_miles_km.py
+Estimate: 1 hour
+Actual: 40 1 hour
 """
 
 from kivy.app import App
